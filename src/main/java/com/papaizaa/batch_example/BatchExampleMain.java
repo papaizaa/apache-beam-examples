@@ -1,6 +1,8 @@
 package com.papaizaa.batch_example;
 
+import com.google.api.services.bigquery.model.TableFieldSchema;
 import com.google.api.services.bigquery.model.TableRow;
+import com.google.api.services.bigquery.model.TableSchema;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO;
 import org.apache.beam.sdk.io.gcp.bigquery.TableRowJsonCoder;
@@ -8,13 +10,22 @@ import org.apache.beam.sdk.options.Description;
 import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.options.ValueProvider;
+import org.apache.beam.sdk.transforms.GroupByKey;
 import org.apache.beam.sdk.transforms.ParDo;
+import org.apache.beam.sdk.transforms.join.CoGroupByKey;
+import org.apache.beam.sdk.transforms.join.KeyedPCollectionTuple;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
+import org.apache.beam.sdk.values.TupleTag;
+import org.joda.time.Duration;
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.slf4j.Logger;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.slf4j.LoggerFactory.*;
 
@@ -53,14 +64,28 @@ public class BatchExampleMain {
                 )
                 .usingStandardSql()).setCoder(TableRowJsonCoder.of());
 
-        PCollection<KV<String, Double>> bookPurchases =
+        PCollection<KV<String, Iterable<Double>>> bookPurchases =
                 bookData
-                        .apply("Parse Sound Events", ParDo.of(new ParseTableData.Parse()));
+                        .apply("Parse Sound Events", ParDo.of(new ParseTableData.Parse()))
+                        .apply("Group Books", GroupByKey.create());
 
-        PCollection<KV<String, Double>> groceryPurchases =
+        PCollection<KV<String, Iterable<Double>>> groceryPurchases =
                 groceryData
-                        .apply("Parse Grocery Purchases", ParDo.of(new ParseTableData.Parse()));
+                        .apply("Parse Grocery Purchases", ParDo.of(new ParseTableData.Parse()))
+                        .apply("Group Groceries", GroupByKey.create());
 
+        TupleTag<Iterable<Double>> booksTag = new TupleTag<>();
+        TupleTag<Iterable<Double>> groceryTag = new TupleTag<>();
+
+        KeyedPCollectionTuple.of(booksTag, bookPurchases)
+                .and(groceryTag, groceryPurchases)
+                .apply("CoGroupByKey", CoGroupByKey.create())
+                .apply("Join Data", ParDo.of(new JoinEvents.Join(booksTag, groceryTag)))
+                .apply("WriteToBigQuery",
+                        BigQueryIO.writeTableRows().to(options.getWeeklyAggregatedSalesInputTable())
+                                .withSchema(getWeeklySalesSchema())
+                                .withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_NEVER)
+                                .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND));
     }
 
 
@@ -76,6 +101,20 @@ public class BatchExampleMain {
 
         void setGrocerySalesInputTable(ValueProvider<String> value);
 
+        @Description("The location of the BigQuery table for Weekly Aggregated Sales data")
+        ValueProvider<String> getWeeklyAggregatedSalesInputTable();
 
+        void setWeeklyAggregatedSalesInputTable(ValueProvider<String> value);
+    }
+
+    // BigQuery table schema for the DoorEvents Table.
+    public static TableSchema getWeeklySalesSchema() {
+        List<TableFieldSchema> fields = new ArrayList<>();
+        fields.add(new TableFieldSchema().setName("UserID").setType("STRING"));
+        fields.add(new TableFieldSchema().setName("TotalSalesInWeek").setType("FLOAT"));
+        fields.add(new TableFieldSchema().setName("StartOfWeek").setType("TIMESTAMP"));
+        fields.add(new TableFieldSchema().setName("EndOfWeek").setType("TIMESTAMP"));
+
+        return new TableSchema().setFields(fields);
     }
 }
