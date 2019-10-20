@@ -9,10 +9,12 @@ import org.apache.beam.sdk.testing.TestPipeline;
 import org.apache.beam.sdk.transforms.Create;
 import org.apache.beam.sdk.transforms.GroupByKey;
 import org.apache.beam.sdk.transforms.ParDo;
+import org.apache.beam.sdk.transforms.View;
 import org.apache.beam.sdk.transforms.join.CoGroupByKey;
 import org.apache.beam.sdk.transforms.join.KeyedPCollectionTuple;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
+import org.apache.beam.sdk.values.PCollectionView;
 import org.apache.beam.sdk.values.TupleTag;
 import org.joda.time.DateTimeUtils;
 import org.joda.time.LocalDateTime;
@@ -52,6 +54,17 @@ public class JoinEventsTest {
                         .set("UserID", "1")
                         .set("Price", 85.0));
 
+        LocalDateTime endDate = LocalDateTime.now()
+                .withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0).withMillisOfSecond(0);
+        LocalDateTime startDate = endDate.minusDays(7);
+
+        final PCollectionView<LocalDateTime> dateStartView = testPipeline
+                .apply("DateStart to Pcollection", Create.of(startDate))
+                .apply("DateStart as View", View.asSingleton());
+        final PCollectionView<LocalDateTime> dateEndView = testPipeline
+                .apply("DateEnd to Pcollection", Create.of(endDate))
+                .apply("DateEnd as View", View.asSingleton());
+
         PCollection<KV<String, Iterable<Double>>> books = testPipeline
                 .apply("Create books input", Create.of(inputBooks))
                 .apply("Parse Books",
@@ -71,11 +84,9 @@ public class JoinEventsTest {
                 KeyedPCollectionTuple.of(booksTag, books)
                 .and(groceryTag, groceries)
                 .apply("CoGroupByKey", CoGroupByKey.create())
-                .apply("Join Data", ParDo.of(new JoinEvents.Join(booksTag, groceryTag)));
+                .apply("Join Data", ParDo.of(new JoinEvents.Join(booksTag, groceryTag, dateStartView, dateEndView))
+                        .withSideInputs(dateStartView, dateEndView));
 
-        LocalDateTime endDate = LocalDateTime.now()
-                .withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0).withMillisOfSecond(0);
-        LocalDateTime startDate = endDate.minusDays(7);
 
         TableRow rowUser1 = new TableRow();
         rowUser1.set("UserID", "1");

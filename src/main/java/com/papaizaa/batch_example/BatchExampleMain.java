@@ -10,12 +10,15 @@ import org.apache.beam.sdk.options.Description;
 import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.options.ValueProvider;
+import org.apache.beam.sdk.transforms.Create;
 import org.apache.beam.sdk.transforms.GroupByKey;
 import org.apache.beam.sdk.transforms.ParDo;
+import org.apache.beam.sdk.transforms.View;
 import org.apache.beam.sdk.transforms.join.CoGroupByKey;
 import org.apache.beam.sdk.transforms.join.KeyedPCollectionTuple;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
+import org.apache.beam.sdk.values.PCollectionView;
 import org.apache.beam.sdk.values.TupleTag;
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -43,6 +46,13 @@ public class BatchExampleMain {
         LocalDateTime endDate = LocalDateTime.now()
                 .withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0).withMillisOfSecond(0);
         LocalDateTime startDate = endDate.minusDays(7);
+
+        final PCollectionView<LocalDateTime> dateStartView = pipeline
+                .apply("DateStart to Pcollection", Create.of(startDate))
+                .apply(View.asSingleton());
+        final PCollectionView<LocalDateTime> dateEndView = pipeline
+                .apply("DateEnd to Pcollection", Create.of(endDate))
+                .apply(View.asSingleton());
 
 
         PCollection<TableRow> bookData = pipeline.apply("Read Book Table", BigQueryIO.readTableRows()
@@ -79,7 +89,8 @@ public class BatchExampleMain {
         KeyedPCollectionTuple.of(booksTag, bookPurchases)
                 .and(groceryTag, groceryPurchases)
                 .apply("CoGroupByKey", CoGroupByKey.create())
-                .apply("Join Data", ParDo.of(new JoinEvents.Join(booksTag, groceryTag)))
+                .apply("Join Data", ParDo.of(new JoinEvents.Join(booksTag, groceryTag, dateStartView, dateEndView))
+                        .withSideInputs(dateStartView, dateEndView))
                 .apply("WriteToBigQuery",
                         BigQueryIO.writeTableRows().to(options.getWeeklyAggregatedSalesInputTable())
                                 .withSchema(getWeeklySalesSchema())
