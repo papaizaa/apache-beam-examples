@@ -23,16 +23,6 @@ public class JoinEvents {
             this.groceriesTag = groceriesTag;
         }
 
-        public static TableRow sumToTableRow(String userId, double total, LocalDateTime startDate, LocalDateTime endDate){
-            TableRow row = new TableRow();
-            row.set("UserID", userId);
-            row.set("TotalSalesInWeek", total);
-            row.set("StartOfWeek", startDate.toString());
-            row.set("EndOfWeek", endDate.toString());
-
-            return row;
-        }
-
         @ProcessElement
         public void processElement(ProcessContext c) {
             KV<String, CoGbkResult> e = c.element();
@@ -53,6 +43,16 @@ public class JoinEvents {
             LocalDateTime startDate = endDate.minusDays(7);
 
             c.output(sumToTableRow(userId, bookTotal + groceryTotal, startDate, endDate));
+        }
+
+        public static TableRow sumToTableRow(String userId, double total, LocalDateTime startDate, LocalDateTime endDate){
+            TableRow row = new TableRow();
+            row.set("UserID", userId);
+            row.set("TotalSalesInWeek", total);
+            row.set("StartOfWeek", startDate.toString());
+            row.set("EndOfWeek", endDate.toString());
+
+            return row;
         }
     }
 
