@@ -20,14 +20,14 @@ public class ParseTableDataTest {
     @Test
     public void testFailedTableRowData(){
 
-        ImmutableList<TableRow> inputDoorRow = ImmutableList.of(
+        ImmutableList<TableRow> input = ImmutableList.of(
                 new TableRow()
                         .set("UserID", "22222"),
                 new TableRow()
                         .set("Price", 20.0));
 
         PCollection<KV<String, Double>> out = testPipeline
-                .apply("Create Stream", Create.of(inputDoorRow))
+                .apply("Create input", Create.of(input))
                 .apply("Parse pipeline",
                         ParDo.of(new ParseTableData.Parse()));
 
@@ -39,7 +39,7 @@ public class ParseTableDataTest {
     @Test
     public void testParseTableRowDataSuccess(){
 
-        ImmutableList<TableRow> inputDoorRow = ImmutableList.of(
+        ImmutableList<TableRow> input = ImmutableList.of(
                 new TableRow()
                         .set("UserID", "22222")
                         .set("Price", 20.1),
@@ -48,7 +48,7 @@ public class ParseTableDataTest {
                         .set("Price", 20.0));
 
         PCollection<KV<String, Double>> out = testPipeline
-                .apply("Create Stream", Create.of(inputDoorRow))
+                .apply("Create input", Create.of(input))
                 .apply("Parse pipeline",
                         ParDo.of(new ParseTableData.Parse()));
 
