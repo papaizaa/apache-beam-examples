@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.beam:beam-vendor-bytebuddy-1_9_3:0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-vendor-bytebuddy-1_9_3/0.1/83add786c852ba6b80aeb59c7739c3b91f70c1c1/beam-vendor-bytebuddy-1_9_3-0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

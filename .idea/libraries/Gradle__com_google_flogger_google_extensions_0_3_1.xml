@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.flogger:google-extensions:0.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.flogger/google-extensions/0.3.1/9c206a35c2b1a6108f6a61cf82c00314a878b792/google-extensions-0.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.flogger/google-extensions/0.3.1/a2061a1b45b91b31eb12ba6037c3e4b6971e88f9/google-extensions-0.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

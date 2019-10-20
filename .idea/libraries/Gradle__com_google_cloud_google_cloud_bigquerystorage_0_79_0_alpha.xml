@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.cloud:google-cloud-bigquerystorage:0.79.0-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud/google-cloud-bigquerystorage/0.79.0-alpha/b90df982391db2d31658c594297bb4374b18bf71/google-cloud-bigquerystorage-0.79.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud/google-cloud-bigquerystorage/0.79.0-alpha/e03460ea7cc0a820dc4933cd43c28d5936caedc2/google-cloud-bigquerystorage-0.79.0-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

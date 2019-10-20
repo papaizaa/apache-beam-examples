@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.beam:beam-model-job-management:2.16.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-model-job-management/2.16.0/96f1d1a71e00851050649f196b5580c038053705/beam-model-job-management-2.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-model-job-management/2.16.0/d2c31d2045a0b71556f147c2319d41a64435ad88/beam-model-job-management-2.16.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

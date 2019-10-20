@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.cloud.bigdataoss:gcsio:1.9.16">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud.bigdataoss/gcsio/1.9.16/7efb0484bcdfb23038d651704b02a5a1cdb2eab0/gcsio-1.9.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud.bigdataoss/gcsio/1.9.16/23f251d783e530e05b2731949e9a2e380bfff94e/gcsio-1.9.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

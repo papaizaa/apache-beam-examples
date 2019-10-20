@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.beam:beam-model-pipeline:2.16.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-model-pipeline/2.16.0/3793eb48d9cc5d3eeb03240303305fc2fa05039d/beam-model-pipeline-2.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-model-pipeline/2.16.0/8d5dffa33f85ccc334f54bf0637f3013e808f5d/beam-model-pipeline-2.16.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

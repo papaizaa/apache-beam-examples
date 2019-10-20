@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.opencensus:opencensus-contrib-grpc-util:0.17.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.opencensus/opencensus-contrib-grpc-util/0.17.0/cf4503818662a18c801e52d8988055d8401978ea/opencensus-contrib-grpc-util-0.17.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.opencensus/opencensus-contrib-grpc-util/0.17.0/74b6485a55a9cfba8fb1c516786f0e0ea71dbf25/opencensus-contrib-grpc-util-0.17.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

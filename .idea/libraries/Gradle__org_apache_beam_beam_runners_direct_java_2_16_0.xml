@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.beam:beam-runners-direct-java:2.16.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-runners-direct-java/2.16.0/41283278cdca0715a35427f1839149b6df0546f2/beam-runners-direct-java-2.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-runners-direct-java/2.16.0/b39d19052047e44083da45900ef45c05fe9b030b/beam-runners-direct-java-2.16.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

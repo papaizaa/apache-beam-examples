@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.cloud:google-cloud-bigtable:0.73.0-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud/google-cloud-bigtable/0.73.0-alpha/4e7f6b1c48d50596d671fabc0ec8a4d0ff4a99ee/google-cloud-bigtable-0.73.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.cloud/google-cloud-bigtable/0.73.0-alpha/7bac87fe6e39cf2cfebed0ea3ef64d27527e5cbc/google-cloud-bigtable-0.73.0-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

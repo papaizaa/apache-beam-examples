@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.powermock:powermock-api-mockito-common:1.7.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito-common/1.7.0/75e9dafa92288442b86482dadcb8467613c0359/powermock-api-mockito-common-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito-common/1.7.0/9e4e9625cd8b6102abf3ec1d4c2e5eae9da1ab61/powermock-api-mockito-common-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

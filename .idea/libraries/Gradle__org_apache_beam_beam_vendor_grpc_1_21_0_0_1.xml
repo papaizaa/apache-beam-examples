@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.beam:beam-vendor-grpc-1_21_0:0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.beam/beam-vendor-grpc-1_21_0/0.1/981bc46aa36b2cad9b956f21278198675a3f09fd/beam-vendor-grpc-1_21_0-0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
