@@ -16,10 +16,7 @@ import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PCollectionView;
 import org.apache.beam.sdk.values.TupleTag;
-import org.joda.time.DateTimeUtils;
 import org.joda.time.LocalDateTime;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -28,15 +25,6 @@ public class JoinEventsTest {
     @Rule
     public final transient TestPipeline testPipeline = TestPipeline.create();
 
-    @Before
-    public void setUp(){
-        DateTimeUtils.setCurrentMillisFixed(1010);
-    }
-
-    @After
-    public void tearDown(){
-        DateTimeUtils.setCurrentMillisSystem();
-    }
 
     @Test
     public void testParseTableRowDataSuccess(){
