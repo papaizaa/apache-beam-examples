@@ -1,0 +1,27 @@
+syntax = "proto3";
+package example;
+option java_package = "com.papaizaa.streaming_example.generated_pb";
+
+message Event {
+
+    enum EventType {
+        BOOK_SALE = 0;
+        GROCERY_SALE = 1;
+    }
+
+    string event_id = 1;
+    string event_time = 2;
+    string user_id = 3;
+    float price = 4;
+    EventType event_type = 5;
+}
+
+message Output {
+    string window_id = 1;
+    string user_id = 2;
+    string window_start = 3;
+    string window_end = 4;
+    float total_price = 5;
+    bool window_open = 6;
+    repeated Event events = 7;
+}
