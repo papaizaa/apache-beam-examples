@@ -20,14 +20,17 @@ public class KeyValueSplit {
 
                 if (element.getUserId().equals("")){
                     LOG.error("PROTO input: {} has no USERID: ", c.element());
+                    return;
                 }
 
                 if (element.getEventTime().equals("")){
                     LOG.error("PROTO input: {} has no EVENT TIME: ", c.element());
+                    return;
                 }
 
                 if (element.getPrice() <= 0.0){
                     LOG.error("PROTO input: {} has no PRICE: ", c.element());
+                    return;
                 }
 
                 String key = element.getUserId();
