@@ -51,7 +51,7 @@ public class JoinEvents {
             c.output(sumToTableRow(userId, bookTotal + groceryTotal, dateStart, dateEnd));
         }
 
-        public static TableRow sumToTableRow(String userId, double total, LocalDateTime startDate, LocalDateTime endDate){
+        public static TableRow sumToTableRow(String userId, double total, LocalDateTime startDate, LocalDateTime endDate) {
             TableRow row = new TableRow();
             row.set("UserID", userId);
             row.set("TotalSalesInWeek", total);

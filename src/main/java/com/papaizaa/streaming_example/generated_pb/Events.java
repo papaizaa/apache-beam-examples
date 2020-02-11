@@ -4,2724 +4,2959 @@
 package com.papaizaa.streaming_example.generated_pb;
 
 public final class Events {
-  private Events() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_example_Event_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_example_Event_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_example_Output_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_example_Output_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.FileDescriptor
+            descriptor;
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface EventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.Event)
-      com.google.protobuf.MessageOrBuilder {
+    static {
+        java.lang.String[] descriptorData = {
+                "\n\014events.proto\022\007example\"\251\001\n\005Event\022\020\n\010eve" +
+                        "nt_id\030\001 \001(\t\022\022\n\nevent_time\030\002 \001(\t\022\017\n\007user_" +
+                        "id\030\003 \001(\t\022\r\n\005price\030\004 \001(\002\022,\n\nevent_type\030\005 " +
+                        "\001(\0162\030.example.Event.EventType\",\n\tEventTy" +
+                        "pe\022\r\n\tBOOK_SALE\020\000\022\020\n\014GROCERY_SALE\020\001\"\240\001\n\006" +
+                        "Output\022\021\n\twindow_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001" +
+                        "(\t\022\024\n\014window_start\030\003 \001(\t\022\022\n\nwindow_end\030\004" +
+                        " \001(\t\022\023\n\013total_price\030\005 \001(\002\022\023\n\013window_open" +
+                        "\030\006 \001(\010\022\036\n\006events\030\007 \003(\0132\016.example.EventB-" +
+                        "\n+com.papaizaa.streaming_example.generat" +
+                        "ed_pbb\006proto3"
+        };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor
+                .internalBuildGeneratedFileFrom(descriptorData,
+                        new com.google.protobuf.Descriptors.FileDescriptor[]{
+                        });
+        internal_static_example_Event_descriptor =
+                getDescriptor().getMessageTypes().get(0);
+        internal_static_example_Event_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_example_Event_descriptor,
+                new java.lang.String[]{"EventId", "EventTime", "UserId", "Price", "EventType",});
+        internal_static_example_Output_descriptor =
+                getDescriptor().getMessageTypes().get(1);
+        internal_static_example_Output_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_example_Output_descriptor,
+                new java.lang.String[]{"WindowId", "UserId", "WindowStart", "WindowEnd", "TotalPrice", "WindowOpen", "Events",});
+    }
 
-    /**
-     * <code>string event_id = 1;</code>
-     * @return The eventId.
-     */
-    java.lang.String getEventId();
-    /**
-     * <code>string event_id = 1;</code>
-     * @return The bytes for eventId.
-     */
-    com.google.protobuf.ByteString
+    private Events() {
+    }
+
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistryLite registry) {
+    }
+
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions(
+                (com.google.protobuf.ExtensionRegistryLite) registry);
+    }
+
+    public static com.google.protobuf.Descriptors.FileDescriptor
+    getDescriptor() {
+        return descriptor;
+    }
+    public interface EventOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:example.Event)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string event_id = 1;</code>
+         *
+         * @return The eventId.
+         */
+        java.lang.String getEventId();
+
+        /**
+         * <code>string event_id = 1;</code>
+         *
+         * @return The bytes for eventId.
+         */
+        com.google.protobuf.ByteString
         getEventIdBytes();
 
-    /**
-     * <code>string event_time = 2;</code>
-     * @return The eventTime.
-     */
-    java.lang.String getEventTime();
-    /**
-     * <code>string event_time = 2;</code>
-     * @return The bytes for eventTime.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string event_time = 2;</code>
+         *
+         * @return The eventTime.
+         */
+        java.lang.String getEventTime();
+
+        /**
+         * <code>string event_time = 2;</code>
+         *
+         * @return The bytes for eventTime.
+         */
+        com.google.protobuf.ByteString
         getEventTimeBytes();
 
-    /**
-     * <code>string user_id = 3;</code>
-     * @return The userId.
-     */
-    java.lang.String getUserId();
-    /**
-     * <code>string user_id = 3;</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>string user_id = 3;</code>
+         *
+         * @return The userId.
+         */
+        java.lang.String getUserId();
+
+        /**
+         * <code>string user_id = 3;</code>
+         *
+         * @return The bytes for userId.
+         */
+        com.google.protobuf.ByteString
         getUserIdBytes();
 
-    /**
-     * <code>float price = 4;</code>
-     * @return The price.
-     */
-    float getPrice();
+        /**
+         * <code>float price = 4;</code>
+         *
+         * @return The price.
+         */
+        float getPrice();
 
-    /**
-     * <code>.example.Event.EventType event_type = 5;</code>
-     * @return The enum numeric value on the wire for eventType.
-     */
-    int getEventTypeValue();
-    /**
-     * <code>.example.Event.EventType event_type = 5;</code>
-     * @return The eventType.
-     */
-    com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType();
-  }
-  /**
-   * Protobuf type {@code example.Event}
-   */
-  public  static final class Event extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:example.Event)
-      EventOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Event.newBuilder() to construct.
-    private Event(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Event() {
-      eventId_ = "";
-      eventTime_ = "";
-      userId_ = "";
-      eventType_ = 0;
+        /**
+         * <code>.example.Event.EventType event_type = 5;</code>
+         *
+         * @return The enum numeric value on the wire for eventType.
+         */
+        int getEventTypeValue();
+
+        /**
+         * <code>.example.Event.EventType event_type = 5;</code>
+         *
+         * @return The eventType.
+         */
+        com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType();
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Event();
+    public interface OutputOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:example.Output)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string window_id = 1;</code>
+         *
+         * @return The windowId.
+         */
+        java.lang.String getWindowId();
+
+        /**
+         * <code>string window_id = 1;</code>
+         *
+         * @return The bytes for windowId.
+         */
+        com.google.protobuf.ByteString
+        getWindowIdBytes();
+
+        /**
+         * <code>string user_id = 2;</code>
+         *
+         * @return The userId.
+         */
+        java.lang.String getUserId();
+
+        /**
+         * <code>string user_id = 2;</code>
+         *
+         * @return The bytes for userId.
+         */
+        com.google.protobuf.ByteString
+        getUserIdBytes();
+
+        /**
+         * <code>string window_start = 3;</code>
+         *
+         * @return The windowStart.
+         */
+        java.lang.String getWindowStart();
+
+        /**
+         * <code>string window_start = 3;</code>
+         *
+         * @return The bytes for windowStart.
+         */
+        com.google.protobuf.ByteString
+        getWindowStartBytes();
+
+        /**
+         * <code>string window_end = 4;</code>
+         *
+         * @return The windowEnd.
+         */
+        java.lang.String getWindowEnd();
+
+        /**
+         * <code>string window_end = 4;</code>
+         *
+         * @return The bytes for windowEnd.
+         */
+        com.google.protobuf.ByteString
+        getWindowEndBytes();
+
+        /**
+         * <code>float total_price = 5;</code>
+         *
+         * @return The totalPrice.
+         */
+        float getTotalPrice();
+
+        /**
+         * <code>bool window_open = 6;</code>
+         *
+         * @return The windowOpen.
+         */
+        boolean getWindowOpen();
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event>
+        getEventsList();
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index);
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        int getEventsCount();
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>
+        getEventsOrBuilderList();
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
+                int index);
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Event(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eventId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eventTime_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              userId_ = s;
-              break;
-            }
-            case 37: {
-
-              price_ = input.readFloat();
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              eventType_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.papaizaa.streaming_example.generated_pb.Events.Event.class, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code example.Event.EventType}
-     */
-    public enum EventType
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>BOOK_SALE = 0;</code>
-       */
-      BOOK_SALE(0),
-      /**
-       * <code>GROCERY_SALE = 1;</code>
-       */
-      GROCERY_SALE(1),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>BOOK_SALE = 0;</code>
-       */
-      public static final int BOOK_SALE_VALUE = 0;
-      /**
-       * <code>GROCERY_SALE = 1;</code>
-       */
-      public static final int GROCERY_SALE_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static EventType valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static EventType forNumber(int value) {
-        switch (value) {
-          case 0: return BOOK_SALE;
-          case 1: return GROCERY_SALE;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<EventType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          EventType> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
-              public EventType findValueByNumber(int number) {
-                return EventType.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.papaizaa.streaming_example.generated_pb.Events.Event.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final EventType[] VALUES = values();
-
-      public static EventType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private EventType(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:example.Event.EventType)
-    }
-
-    public static final int EVENT_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object eventId_;
-    /**
-     * <code>string event_id = 1;</code>
-     * @return The eventId.
-     */
-    public java.lang.String getEventId() {
-      java.lang.Object ref = eventId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        eventId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string event_id = 1;</code>
-     * @return The bytes for eventId.
-     */
-    public com.google.protobuf.ByteString
-        getEventIdBytes() {
-      java.lang.Object ref = eventId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EVENT_TIME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object eventTime_;
-    /**
-     * <code>string event_time = 2;</code>
-     * @return The eventTime.
-     */
-    public java.lang.String getEventTime() {
-      java.lang.Object ref = eventTime_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        eventTime_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string event_time = 2;</code>
-     * @return The bytes for eventTime.
-     */
-    public com.google.protobuf.ByteString
-        getEventTimeBytes() {
-      java.lang.Object ref = eventTime_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventTime_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int USER_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object userId_;
-    /**
-     * <code>string user_id = 3;</code>
-     * @return The userId.
-     */
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string user_id = 3;</code>
-     * @return The bytes for userId.
-     */
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PRICE_FIELD_NUMBER = 4;
-    private float price_;
-    /**
-     * <code>float price = 4;</code>
-     * @return The price.
-     */
-    public float getPrice() {
-      return price_;
-    }
-
-    public static final int EVENT_TYPE_FIELD_NUMBER = 5;
-    private int eventType_;
-    /**
-     * <code>.example.Event.EventType event_type = 5;</code>
-     * @return The enum numeric value on the wire for eventType.
-     */
-    public int getEventTypeValue() {
-      return eventType_;
-    }
-    /**
-     * <code>.example.Event.EventType event_type = 5;</code>
-     * @return The eventType.
-     */
-    public com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType() {
-      @SuppressWarnings("deprecation")
-      com.papaizaa.streaming_example.generated_pb.Events.Event.EventType result = com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.valueOf(eventType_);
-      return result == null ? com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getEventIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, eventId_);
-      }
-      if (!getEventTimeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventTime_);
-      }
-      if (!getUserIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
-      }
-      if (price_ != 0F) {
-        output.writeFloat(4, price_);
-      }
-      if (eventType_ != com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.BOOK_SALE.getNumber()) {
-        output.writeEnum(5, eventType_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getEventIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, eventId_);
-      }
-      if (!getEventTimeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventTime_);
-      }
-      if (!getUserIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
-      }
-      if (price_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, price_);
-      }
-      if (eventType_ != com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.BOOK_SALE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, eventType_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.papaizaa.streaming_example.generated_pb.Events.Event)) {
-        return super.equals(obj);
-      }
-      com.papaizaa.streaming_example.generated_pb.Events.Event other = (com.papaizaa.streaming_example.generated_pb.Events.Event) obj;
-
-      if (!getEventId()
-          .equals(other.getEventId())) return false;
-      if (!getEventTime()
-          .equals(other.getEventTime())) return false;
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
-      if (java.lang.Float.floatToIntBits(getPrice())
-          != java.lang.Float.floatToIntBits(
-              other.getPrice())) return false;
-      if (eventType_ != other.eventType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getEventId().hashCode();
-      hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getEventTime().hashCode();
-      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId().hashCode();
-      hash = (37 * hash) + PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPrice());
-      hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + eventType_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.papaizaa.streaming_example.generated_pb.Events.Event prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code example.Event}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.Event)
-        com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.papaizaa.streaming_example.generated_pb.Events.Event.class, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder.class);
-      }
-
-      // Construct using com.papaizaa.streaming_example.generated_pb.Events.Event.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        eventId_ = "";
-
-        eventTime_ = "";
-
-        userId_ = "";
-
-        price_ = 0F;
-
-        eventType_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstanceForType() {
-        return com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Event build() {
-        com.papaizaa.streaming_example.generated_pb.Events.Event result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Event buildPartial() {
-        com.papaizaa.streaming_example.generated_pb.Events.Event result = new com.papaizaa.streaming_example.generated_pb.Events.Event(this);
-        result.eventId_ = eventId_;
-        result.eventTime_ = eventTime_;
-        result.userId_ = userId_;
-        result.price_ = price_;
-        result.eventType_ = eventType_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.papaizaa.streaming_example.generated_pb.Events.Event) {
-          return mergeFrom((com.papaizaa.streaming_example.generated_pb.Events.Event)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.papaizaa.streaming_example.generated_pb.Events.Event other) {
-        if (other == com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance()) return this;
-        if (!other.getEventId().isEmpty()) {
-          eventId_ = other.eventId_;
-          onChanged();
-        }
-        if (!other.getEventTime().isEmpty()) {
-          eventTime_ = other.eventTime_;
-          onChanged();
-        }
-        if (!other.getUserId().isEmpty()) {
-          userId_ = other.userId_;
-          onChanged();
-        }
-        if (other.getPrice() != 0F) {
-          setPrice(other.getPrice());
-        }
-        if (other.eventType_ != 0) {
-          setEventTypeValue(other.getEventTypeValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.papaizaa.streaming_example.generated_pb.Events.Event parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.papaizaa.streaming_example.generated_pb.Events.Event) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object eventId_ = "";
-      /**
-       * <code>string event_id = 1;</code>
-       * @return The eventId.
-       */
-      public java.lang.String getEventId() {
-        java.lang.Object ref = eventId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          eventId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string event_id = 1;</code>
-       * @return The bytes for eventId.
-       */
-      public com.google.protobuf.ByteString
-          getEventIdBytes() {
-        java.lang.Object ref = eventId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          eventId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string event_id = 1;</code>
-       * @param value The eventId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        eventId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string event_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEventId() {
-        
-        eventId_ = getDefaultInstance().getEventId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string event_id = 1;</code>
-       * @param value The bytes for eventId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        eventId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object eventTime_ = "";
-      /**
-       * <code>string event_time = 2;</code>
-       * @return The eventTime.
-       */
-      public java.lang.String getEventTime() {
-        java.lang.Object ref = eventTime_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          eventTime_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string event_time = 2;</code>
-       * @return The bytes for eventTime.
-       */
-      public com.google.protobuf.ByteString
-          getEventTimeBytes() {
-        java.lang.Object ref = eventTime_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          eventTime_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string event_time = 2;</code>
-       * @param value The eventTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventTime(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        eventTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string event_time = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEventTime() {
-        
-        eventTime_ = getDefaultInstance().getEventTime();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string event_time = 2;</code>
-       * @param value The bytes for eventTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventTimeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        eventTime_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object userId_ = "";
-      /**
-       * <code>string user_id = 3;</code>
-       * @return The userId.
-       */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 3;</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 3;</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        
-        userId_ = getDefaultInstance().getUserId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 3;</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private float price_ ;
-      /**
-       * <code>float price = 4;</code>
-       * @return The price.
-       */
-      public float getPrice() {
-        return price_;
-      }
-      /**
-       * <code>float price = 4;</code>
-       * @param value The price to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrice(float value) {
-        
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float price = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrice() {
-        
-        price_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private int eventType_ = 0;
-      /**
-       * <code>.example.Event.EventType event_type = 5;</code>
-       * @return The enum numeric value on the wire for eventType.
-       */
-      public int getEventTypeValue() {
-        return eventType_;
-      }
-      /**
-       * <code>.example.Event.EventType event_type = 5;</code>
-       * @param value The enum numeric value on the wire for eventType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventTypeValue(int value) {
-        eventType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.Event.EventType event_type = 5;</code>
-       * @return The eventType.
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType() {
-        @SuppressWarnings("deprecation")
-        com.papaizaa.streaming_example.generated_pb.Events.Event.EventType result = com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.valueOf(eventType_);
-        return result == null ? com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.Event.EventType event_type = 5;</code>
-       * @param value The eventType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventType(com.papaizaa.streaming_example.generated_pb.Events.Event.EventType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        eventType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.Event.EventType event_type = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEventType() {
-        
-        eventType_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:example.Event)
-    }
-
-    // @@protoc_insertion_point(class_scope:example.Event)
-    private static final com.papaizaa.streaming_example.generated_pb.Events.Event DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.papaizaa.streaming_example.generated_pb.Events.Event();
-    }
-
-    public static com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Event>
-        PARSER = new com.google.protobuf.AbstractParser<Event>() {
-      @java.lang.Override
-      public Event parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Event(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Event> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Event> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface OutputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.Output)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string window_id = 1;</code>
-     * @return The windowId.
-     */
-    java.lang.String getWindowId();
-    /**
-     * <code>string window_id = 1;</code>
-     * @return The bytes for windowId.
-     */
-    com.google.protobuf.ByteString
-        getWindowIdBytes();
-
-    /**
-     * <code>string user_id = 2;</code>
-     * @return The userId.
-     */
-    java.lang.String getUserId();
-    /**
-     * <code>string user_id = 2;</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
-        getUserIdBytes();
-
-    /**
-     * <code>string window_start = 3;</code>
-     * @return The windowStart.
-     */
-    java.lang.String getWindowStart();
-    /**
-     * <code>string window_start = 3;</code>
-     * @return The bytes for windowStart.
-     */
-    com.google.protobuf.ByteString
-        getWindowStartBytes();
-
-    /**
-     * <code>string window_end = 4;</code>
-     * @return The windowEnd.
-     */
-    java.lang.String getWindowEnd();
-    /**
-     * <code>string window_end = 4;</code>
-     * @return The bytes for windowEnd.
-     */
-    com.google.protobuf.ByteString
-        getWindowEndBytes();
-
-    /**
-     * <code>float total_price = 5;</code>
-     * @return The totalPrice.
-     */
-    float getTotalPrice();
-
-    /**
-     * <code>bool window_open = 6;</code>
-     * @return The windowOpen.
-     */
-    boolean getWindowOpen();
-
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> 
-        getEventsList();
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index);
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    int getEventsCount();
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> 
-        getEventsOrBuilderList();
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code example.Output}
-   */
-  public  static final class Output extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:example.Output)
-      OutputOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Output.newBuilder() to construct.
-    private Output(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Output() {
-      windowId_ = "";
-      userId_ = "";
-      windowStart_ = "";
-      windowEnd_ = "";
-      events_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Output();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Output(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              windowId_ = s;
-              break;
+    public static final class Event extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:example.Event)
+            EventOrBuilder {
+        public static final int EVENT_ID_FIELD_NUMBER = 1;
+        public static final int EVENT_TIME_FIELD_NUMBER = 2;
+        public static final int USER_ID_FIELD_NUMBER = 3;
+        public static final int PRICE_FIELD_NUMBER = 4;
+        public static final int EVENT_TYPE_FIELD_NUMBER = 5;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:example.Event)
+        private static final com.papaizaa.streaming_example.generated_pb.Events.Event DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<Event>
+                PARSER = new com.google.protobuf.AbstractParser<Event>() {
+            @java.lang.Override
+            public Event parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Event(input, extensionRegistry);
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+        };
 
-              userId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              windowStart_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              windowEnd_ = s;
-              break;
-            }
-            case 45: {
-
-              totalPrice_ = input.readFloat();
-              break;
-            }
-            case 48: {
-
-              windowOpen_ = input.readBool();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                events_ = new java.util.ArrayList<com.papaizaa.streaming_example.generated_pb.Events.Event>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              events_.add(
-                  input.readMessage(com.papaizaa.streaming_example.generated_pb.Events.Event.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+        static {
+            DEFAULT_INSTANCE = new com.papaizaa.streaming_example.generated_pb.Events.Event();
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          events_ = java.util.Collections.unmodifiableList(events_);
+
+        private volatile java.lang.Object eventId_;
+        private volatile java.lang.Object eventTime_;
+        private volatile java.lang.Object userId_;
+        private float price_;
+        private int eventType_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use Event.newBuilder() to construct.
+        private Event(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        private Event() {
+            eventId_ = "";
+            eventTime_ = "";
+            userId_ = "";
+            eventType_ = 0;
+        }
+
+        private Event(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 10: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            eventId_ = s;
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            eventTime_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            userId_ = s;
+                            break;
+                        }
+                        case 37: {
+
+                            price_ = input.readFloat();
+                            break;
+                        }
+                        case 40: {
+                            int rawValue = input.readEnum();
+
+                            eventType_ = rawValue;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
-    }
+            return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
+        }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.papaizaa.streaming_example.generated_pb.Events.Event prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<Event> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Event();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.papaizaa.streaming_example.generated_pb.Events.Output.class, com.papaizaa.streaming_example.generated_pb.Events.Output.Builder.class);
-    }
+            return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.papaizaa.streaming_example.generated_pb.Events.Event.class, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder.class);
+        }
 
-    public static final int WINDOW_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object windowId_;
-    /**
-     * <code>string window_id = 1;</code>
-     * @return The windowId.
-     */
-    public java.lang.String getWindowId() {
-      java.lang.Object ref = windowId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        windowId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string window_id = 1;</code>
-     * @return The bytes for windowId.
-     */
-    public com.google.protobuf.ByteString
-        getWindowIdBytes() {
-      java.lang.Object ref = windowId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        windowId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+        /**
+         * <code>string event_id = 1;</code>
+         *
+         * @return The eventId.
+         */
+        public java.lang.String getEventId() {
+            java.lang.Object ref = eventId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                eventId_ = s;
+                return s;
+            }
+        }
 
-    public static final int USER_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object userId_;
-    /**
-     * <code>string user_id = 2;</code>
-     * @return The userId.
-     */
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string user_id = 2;</code>
-     * @return The bytes for userId.
-     */
-    public com.google.protobuf.ByteString
+        /**
+         * <code>string event_id = 1;</code>
+         *
+         * @return The bytes for eventId.
+         */
+        public com.google.protobuf.ByteString
+        getEventIdBytes() {
+            java.lang.Object ref = eventId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                eventId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>string event_time = 2;</code>
+         *
+         * @return The eventTime.
+         */
+        public java.lang.String getEventTime() {
+            java.lang.Object ref = eventTime_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                eventTime_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string event_time = 2;</code>
+         *
+         * @return The bytes for eventTime.
+         */
+        public com.google.protobuf.ByteString
+        getEventTimeBytes() {
+            java.lang.Object ref = eventTime_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                eventTime_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>string user_id = 3;</code>
+         *
+         * @return The userId.
+         */
+        public java.lang.String getUserId() {
+            java.lang.Object ref = userId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                userId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string user_id = 3;</code>
+         *
+         * @return The bytes for userId.
+         */
+        public com.google.protobuf.ByteString
         getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+            java.lang.Object ref = userId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                userId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>float price = 4;</code>
+         *
+         * @return The price.
+         */
+        public float getPrice() {
+            return price_;
+        }
+
+        /**
+         * <code>.example.Event.EventType event_type = 5;</code>
+         *
+         * @return The enum numeric value on the wire for eventType.
+         */
+        public int getEventTypeValue() {
+            return eventType_;
+        }
+
+        /**
+         * <code>.example.Event.EventType event_type = 5;</code>
+         *
+         * @return The eventType.
+         */
+        public com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType() {
+            @SuppressWarnings("deprecation")
+            com.papaizaa.streaming_example.generated_pb.Events.Event.EventType result = com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.valueOf(eventType_);
+            return result == null ? com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.UNRECOGNIZED : result;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getEventIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, eventId_);
+            }
+            if (!getEventTimeBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventTime_);
+            }
+            if (!getUserIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
+            }
+            if (price_ != 0F) {
+                output.writeFloat(4, price_);
+            }
+            if (eventType_ != com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.BOOK_SALE.getNumber()) {
+                output.writeEnum(5, eventType_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getEventIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, eventId_);
+            }
+            if (!getEventTimeBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventTime_);
+            }
+            if (!getUserIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
+            }
+            if (price_ != 0F) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(4, price_);
+            }
+            if (eventType_ != com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.BOOK_SALE.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(5, eventType_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.papaizaa.streaming_example.generated_pb.Events.Event)) {
+                return super.equals(obj);
+            }
+            com.papaizaa.streaming_example.generated_pb.Events.Event other = (com.papaizaa.streaming_example.generated_pb.Events.Event) obj;
+
+            if (!getEventId()
+                    .equals(other.getEventId())) return false;
+            if (!getEventTime()
+                    .equals(other.getEventTime())) return false;
+            if (!getUserId()
+                    .equals(other.getUserId())) return false;
+            if (java.lang.Float.floatToIntBits(getPrice())
+                    != java.lang.Float.floatToIntBits(
+                    other.getPrice())) return false;
+            if (eventType_ != other.eventType_) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getEventId().hashCode();
+            hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
+            hash = (53 * hash) + getEventTime().hashCode();
+            hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getUserId().hashCode();
+            hash = (37 * hash) + PRICE_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                    getPrice());
+            hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + eventType_;
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Event> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf enum {@code example.Event.EventType}
+         */
+        public enum EventType
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>BOOK_SALE = 0;</code>
+             */
+            BOOK_SALE(0),
+            /**
+             * <code>GROCERY_SALE = 1;</code>
+             */
+            GROCERY_SALE(1),
+            UNRECOGNIZED(-1),;
+
+            /**
+             * <code>BOOK_SALE = 0;</code>
+             */
+            public static final int BOOK_SALE_VALUE = 0;
+            /**
+             * <code>GROCERY_SALE = 1;</code>
+             */
+            public static final int GROCERY_SALE_VALUE = 1;
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                    EventType> internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
+                        public EventType findValueByNumber(int number) {
+                            return EventType.forNumber(number);
+                        }
+                    };
+            private static final EventType[] VALUES = values();
+            private final int value;
+
+            private EventType(int value) {
+                this.value = value;
+            }
+
+            /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static EventType valueOf(int value) {
+                return forNumber(value);
+            }
+
+            /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
+             */
+            public static EventType forNumber(int value) {
+                switch (value) {
+                    case 0:
+                        return BOOK_SALE;
+                    case 1:
+                        return GROCERY_SALE;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<EventType>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.papaizaa.streaming_example.generated_pb.Events.Event.getDescriptor().getEnumTypes().get(0);
+            }
+
+            public static EventType valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new java.lang.IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                if (desc.getIndex() == -1) {
+                    return UNRECOGNIZED;
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                if (this == UNRECOGNIZED) {
+                    throw new java.lang.IllegalArgumentException(
+                            "Can't get the number of an unknown enum value.");
+                }
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(ordinal());
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:example.Event.EventType)
+        }
+
+        /**
+         * Protobuf type {@code example.Event}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:example.Event)
+                com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder {
+            private java.lang.Object eventId_ = "";
+            private java.lang.Object eventTime_ = "";
+            private java.lang.Object userId_ = "";
+            private float price_;
+            private int eventType_ = 0;
+
+            // Construct using com.papaizaa.streaming_example.generated_pb.Events.Event.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.papaizaa.streaming_example.generated_pb.Events.Event.class, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                eventId_ = "";
+
+                eventTime_ = "";
+
+                userId_ = "";
+
+                price_ = 0F;
+
+                eventType_ = 0;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Event_descriptor;
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Event getDefaultInstanceForType() {
+                return com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Event build() {
+                com.papaizaa.streaming_example.generated_pb.Events.Event result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Event buildPartial() {
+                com.papaizaa.streaming_example.generated_pb.Events.Event result = new com.papaizaa.streaming_example.generated_pb.Events.Event(this);
+                result.eventId_ = eventId_;
+                result.eventTime_ = eventTime_;
+                result.userId_ = userId_;
+                result.price_ = price_;
+                result.eventType_ = eventType_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.papaizaa.streaming_example.generated_pb.Events.Event) {
+                    return mergeFrom((com.papaizaa.streaming_example.generated_pb.Events.Event) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.papaizaa.streaming_example.generated_pb.Events.Event other) {
+                if (other == com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance()) return this;
+                if (!other.getEventId().isEmpty()) {
+                    eventId_ = other.eventId_;
+                    onChanged();
+                }
+                if (!other.getEventTime().isEmpty()) {
+                    eventTime_ = other.eventTime_;
+                    onChanged();
+                }
+                if (!other.getUserId().isEmpty()) {
+                    userId_ = other.userId_;
+                    onChanged();
+                }
+                if (other.getPrice() != 0F) {
+                    setPrice(other.getPrice());
+                }
+                if (other.eventType_ != 0) {
+                    setEventTypeValue(other.getEventTypeValue());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.papaizaa.streaming_example.generated_pb.Events.Event parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.papaizaa.streaming_example.generated_pb.Events.Event) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>string event_id = 1;</code>
+             *
+             * @return The eventId.
+             */
+            public java.lang.String getEventId() {
+                java.lang.Object ref = eventId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    eventId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string event_id = 1;</code>
+             *
+             * @param value The eventId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                eventId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string event_id = 1;</code>
+             *
+             * @return The bytes for eventId.
+             */
+            public com.google.protobuf.ByteString
+            getEventIdBytes() {
+                java.lang.Object ref = eventId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    eventId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string event_id = 1;</code>
+             *
+             * @param value The bytes for eventId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                eventId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string event_id = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearEventId() {
+
+                eventId_ = getDefaultInstance().getEventId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string event_time = 2;</code>
+             *
+             * @return The eventTime.
+             */
+            public java.lang.String getEventTime() {
+                java.lang.Object ref = eventTime_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    eventTime_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string event_time = 2;</code>
+             *
+             * @param value The eventTime to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventTime(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                eventTime_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string event_time = 2;</code>
+             *
+             * @return The bytes for eventTime.
+             */
+            public com.google.protobuf.ByteString
+            getEventTimeBytes() {
+                java.lang.Object ref = eventTime_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    eventTime_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string event_time = 2;</code>
+             *
+             * @param value The bytes for eventTime to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventTimeBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                eventTime_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string event_time = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearEventTime() {
+
+                eventTime_ = getDefaultInstance().getEventTime();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 3;</code>
+             *
+             * @return The userId.
+             */
+            public java.lang.String getUserId() {
+                java.lang.Object ref = userId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    userId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string user_id = 3;</code>
+             *
+             * @param value The userId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUserId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                userId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 3;</code>
+             *
+             * @return The bytes for userId.
+             */
+            public com.google.protobuf.ByteString
+            getUserIdBytes() {
+                java.lang.Object ref = userId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    userId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string user_id = 3;</code>
+             *
+             * @param value The bytes for userId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUserIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                userId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearUserId() {
+
+                userId_ = getDefaultInstance().getUserId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>float price = 4;</code>
+             *
+             * @return The price.
+             */
+            public float getPrice() {
+                return price_;
+            }
+
+            /**
+             * <code>float price = 4;</code>
+             *
+             * @param value The price to set.
+             * @return This builder for chaining.
+             */
+            public Builder setPrice(float value) {
+
+                price_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>float price = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearPrice() {
+
+                price_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>.example.Event.EventType event_type = 5;</code>
+             *
+             * @return The enum numeric value on the wire for eventType.
+             */
+            public int getEventTypeValue() {
+                return eventType_;
+            }
+
+            /**
+             * <code>.example.Event.EventType event_type = 5;</code>
+             *
+             * @param value The enum numeric value on the wire for eventType to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventTypeValue(int value) {
+                eventType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>.example.Event.EventType event_type = 5;</code>
+             *
+             * @return The eventType.
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.Event.EventType getEventType() {
+                @SuppressWarnings("deprecation")
+                com.papaizaa.streaming_example.generated_pb.Events.Event.EventType result = com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.valueOf(eventType_);
+                return result == null ? com.papaizaa.streaming_example.generated_pb.Events.Event.EventType.UNRECOGNIZED : result;
+            }
+
+            /**
+             * <code>.example.Event.EventType event_type = 5;</code>
+             *
+             * @param value The eventType to set.
+             * @return This builder for chaining.
+             */
+            public Builder setEventType(com.papaizaa.streaming_example.generated_pb.Events.Event.EventType value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                eventType_ = value.getNumber();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>.example.Event.EventType event_type = 5;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearEventType() {
+
+                eventType_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:example.Event)
+        }
+
     }
 
-    public static final int WINDOW_START_FIELD_NUMBER = 3;
-    private volatile java.lang.Object windowStart_;
-    /**
-     * <code>string window_start = 3;</code>
-     * @return The windowStart.
-     */
-    public java.lang.String getWindowStart() {
-      java.lang.Object ref = windowStart_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        windowStart_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string window_start = 3;</code>
-     * @return The bytes for windowStart.
-     */
-    public com.google.protobuf.ByteString
-        getWindowStartBytes() {
-      java.lang.Object ref = windowStart_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        windowStart_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int WINDOW_END_FIELD_NUMBER = 4;
-    private volatile java.lang.Object windowEnd_;
-    /**
-     * <code>string window_end = 4;</code>
-     * @return The windowEnd.
-     */
-    public java.lang.String getWindowEnd() {
-      java.lang.Object ref = windowEnd_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        windowEnd_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string window_end = 4;</code>
-     * @return The bytes for windowEnd.
-     */
-    public com.google.protobuf.ByteString
-        getWindowEndBytes() {
-      java.lang.Object ref = windowEnd_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        windowEnd_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOTAL_PRICE_FIELD_NUMBER = 5;
-    private float totalPrice_;
-    /**
-     * <code>float total_price = 5;</code>
-     * @return The totalPrice.
-     */
-    public float getTotalPrice() {
-      return totalPrice_;
-    }
-
-    public static final int WINDOW_OPEN_FIELD_NUMBER = 6;
-    private boolean windowOpen_;
-    /**
-     * <code>bool window_open = 6;</code>
-     * @return The windowOpen.
-     */
-    public boolean getWindowOpen() {
-      return windowOpen_;
-    }
-
-    public static final int EVENTS_FIELD_NUMBER = 7;
-    private java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> events_;
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> getEventsList() {
-      return events_;
-    }
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    public java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> 
-        getEventsOrBuilderList() {
-      return events_;
-    }
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    public int getEventsCount() {
-      return events_.size();
-    }
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    public com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index) {
-      return events_.get(index);
-    }
-    /**
-     * <code>repeated .example.Event events = 7;</code>
-     */
-    public com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
-        int index) {
-      return events_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getWindowIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, windowId_);
-      }
-      if (!getUserIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
-      }
-      if (!getWindowStartBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, windowStart_);
-      }
-      if (!getWindowEndBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, windowEnd_);
-      }
-      if (totalPrice_ != 0F) {
-        output.writeFloat(5, totalPrice_);
-      }
-      if (windowOpen_ != false) {
-        output.writeBool(6, windowOpen_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        output.writeMessage(7, events_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getWindowIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, windowId_);
-      }
-      if (!getUserIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
-      }
-      if (!getWindowStartBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, windowStart_);
-      }
-      if (!getWindowEndBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, windowEnd_);
-      }
-      if (totalPrice_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, totalPrice_);
-      }
-      if (windowOpen_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, windowOpen_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, events_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.papaizaa.streaming_example.generated_pb.Events.Output)) {
-        return super.equals(obj);
-      }
-      com.papaizaa.streaming_example.generated_pb.Events.Output other = (com.papaizaa.streaming_example.generated_pb.Events.Output) obj;
-
-      if (!getWindowId()
-          .equals(other.getWindowId())) return false;
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
-      if (!getWindowStart()
-          .equals(other.getWindowStart())) return false;
-      if (!getWindowEnd()
-          .equals(other.getWindowEnd())) return false;
-      if (java.lang.Float.floatToIntBits(getTotalPrice())
-          != java.lang.Float.floatToIntBits(
-              other.getTotalPrice())) return false;
-      if (getWindowOpen()
-          != other.getWindowOpen()) return false;
-      if (!getEventsList()
-          .equals(other.getEventsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WINDOW_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWindowId().hashCode();
-      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId().hashCode();
-      hash = (37 * hash) + WINDOW_START_FIELD_NUMBER;
-      hash = (53 * hash) + getWindowStart().hashCode();
-      hash = (37 * hash) + WINDOW_END_FIELD_NUMBER;
-      hash = (53 * hash) + getWindowEnd().hashCode();
-      hash = (37 * hash) + TOTAL_PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getTotalPrice());
-      hash = (37 * hash) + WINDOW_OPEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getWindowOpen());
-      if (getEventsCount() > 0) {
-        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getEventsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.papaizaa.streaming_example.generated_pb.Events.Output prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code example.Output}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.Output)
-        com.papaizaa.streaming_example.generated_pb.Events.OutputOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.papaizaa.streaming_example.generated_pb.Events.Output.class, com.papaizaa.streaming_example.generated_pb.Events.Output.Builder.class);
-      }
-
-      // Construct using com.papaizaa.streaming_example.generated_pb.Events.Output.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        windowId_ = "";
-
-        userId_ = "";
-
-        windowStart_ = "";
-
-        windowEnd_ = "";
-
-        totalPrice_ = 0F;
-
-        windowOpen_ = false;
-
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          eventsBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstanceForType() {
-        return com.papaizaa.streaming_example.generated_pb.Events.Output.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Output build() {
-        com.papaizaa.streaming_example.generated_pb.Events.Output result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.papaizaa.streaming_example.generated_pb.Events.Output buildPartial() {
-        com.papaizaa.streaming_example.generated_pb.Events.Output result = new com.papaizaa.streaming_example.generated_pb.Events.Output(this);
-        int from_bitField0_ = bitField0_;
-        result.windowId_ = windowId_;
-        result.userId_ = userId_;
-        result.windowStart_ = windowStart_;
-        result.windowEnd_ = windowEnd_;
-        result.totalPrice_ = totalPrice_;
-        result.windowOpen_ = windowOpen_;
-        if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.events_ = events_;
-        } else {
-          result.events_ = eventsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.papaizaa.streaming_example.generated_pb.Events.Output) {
-          return mergeFrom((com.papaizaa.streaming_example.generated_pb.Events.Output)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.papaizaa.streaming_example.generated_pb.Events.Output other) {
-        if (other == com.papaizaa.streaming_example.generated_pb.Events.Output.getDefaultInstance()) return this;
-        if (!other.getWindowId().isEmpty()) {
-          windowId_ = other.windowId_;
-          onChanged();
-        }
-        if (!other.getUserId().isEmpty()) {
-          userId_ = other.userId_;
-          onChanged();
-        }
-        if (!other.getWindowStart().isEmpty()) {
-          windowStart_ = other.windowStart_;
-          onChanged();
-        }
-        if (!other.getWindowEnd().isEmpty()) {
-          windowEnd_ = other.windowEnd_;
-          onChanged();
-        }
-        if (other.getTotalPrice() != 0F) {
-          setTotalPrice(other.getTotalPrice());
-        }
-        if (other.getWindowOpen() != false) {
-          setWindowOpen(other.getWindowOpen());
-        }
-        if (eventsBuilder_ == null) {
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
+    public static final class Output extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:example.Output)
+            OutputOrBuilder {
+        public static final int WINDOW_ID_FIELD_NUMBER = 1;
+        public static final int USER_ID_FIELD_NUMBER = 2;
+        public static final int WINDOW_START_FIELD_NUMBER = 3;
+        public static final int WINDOW_END_FIELD_NUMBER = 4;
+        public static final int TOTAL_PRICE_FIELD_NUMBER = 5;
+        public static final int WINDOW_OPEN_FIELD_NUMBER = 6;
+        public static final int EVENTS_FIELD_NUMBER = 7;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:example.Output)
+        private static final com.papaizaa.streaming_example.generated_pb.Events.Output DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<Output>
+                PARSER = new com.google.protobuf.AbstractParser<Output>() {
+            @java.lang.Override
+            public Output parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Output(input, extensionRegistry);
             }
-            onChanged();
-          }
-        } else {
-          if (!other.events_.isEmpty()) {
-            if (eventsBuilder_.isEmpty()) {
-              eventsBuilder_.dispose();
-              eventsBuilder_ = null;
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEventsFieldBuilder() : null;
-            } else {
-              eventsBuilder_.addAllMessages(other.events_);
+        };
+
+        static {
+            DEFAULT_INSTANCE = new com.papaizaa.streaming_example.generated_pb.Events.Output();
+        }
+
+        private volatile java.lang.Object windowId_;
+        private volatile java.lang.Object userId_;
+        private volatile java.lang.Object windowStart_;
+        private volatile java.lang.Object windowEnd_;
+        private float totalPrice_;
+        private boolean windowOpen_;
+        private java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> events_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use Output.newBuilder() to construct.
+        private Output(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Output() {
+            windowId_ = "";
+            userId_ = "";
+            windowStart_ = "";
+            windowEnd_ = "";
+            events_ = java.util.Collections.emptyList();
+        }
+        private Output(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 10: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+                            windowId_ = s;
+                            break;
+                        }
+                        case 18: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.papaizaa.streaming_example.generated_pb.Events.Output parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.papaizaa.streaming_example.generated_pb.Events.Output) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
+                            userId_ = s;
+                            break;
+                        }
+                        case 26: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object windowId_ = "";
-      /**
-       * <code>string window_id = 1;</code>
-       * @return The windowId.
-       */
-      public java.lang.String getWindowId() {
-        java.lang.Object ref = windowId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          windowId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string window_id = 1;</code>
-       * @return The bytes for windowId.
-       */
-      public com.google.protobuf.ByteString
-          getWindowIdBytes() {
-        java.lang.Object ref = windowId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          windowId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string window_id = 1;</code>
-       * @param value The windowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        windowId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWindowId() {
-        
-        windowId_ = getDefaultInstance().getWindowId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_id = 1;</code>
-       * @param value The bytes for windowId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        windowId_ = value;
-        onChanged();
-        return this;
-      }
+                            windowStart_ = s;
+                            break;
+                        }
+                        case 34: {
+                            java.lang.String s = input.readStringRequireUtf8();
 
-      private java.lang.Object userId_ = "";
-      /**
-       * <code>string user_id = 2;</code>
-       * @return The userId.
-       */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 2;</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_id = 2;</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        
-        userId_ = getDefaultInstance().getUserId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_id = 2;</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        userId_ = value;
-        onChanged();
-        return this;
-      }
+                            windowEnd_ = s;
+                            break;
+                        }
+                        case 45: {
 
-      private java.lang.Object windowStart_ = "";
-      /**
-       * <code>string window_start = 3;</code>
-       * @return The windowStart.
-       */
-      public java.lang.String getWindowStart() {
-        java.lang.Object ref = windowStart_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          windowStart_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string window_start = 3;</code>
-       * @return The bytes for windowStart.
-       */
-      public com.google.protobuf.ByteString
-          getWindowStartBytes() {
-        java.lang.Object ref = windowStart_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          windowStart_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string window_start = 3;</code>
-       * @param value The windowStart to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowStart(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        windowStart_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_start = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWindowStart() {
-        
-        windowStart_ = getDefaultInstance().getWindowStart();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_start = 3;</code>
-       * @param value The bytes for windowStart to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowStartBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        windowStart_ = value;
-        onChanged();
-        return this;
-      }
+                            totalPrice_ = input.readFloat();
+                            break;
+                        }
+                        case 48: {
 
-      private java.lang.Object windowEnd_ = "";
-      /**
-       * <code>string window_end = 4;</code>
-       * @return The windowEnd.
-       */
-      public java.lang.String getWindowEnd() {
-        java.lang.Object ref = windowEnd_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          windowEnd_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+                            windowOpen_ = input.readBool();
+                            break;
+                        }
+                        case 58: {
+                            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                                events_ = new java.util.ArrayList<com.papaizaa.streaming_example.generated_pb.Events.Event>();
+                                mutable_bitField0_ |= 0x00000001;
+                            }
+                            events_.add(
+                                    input.readMessage(com.papaizaa.streaming_example.generated_pb.Events.Event.parser(), extensionRegistry));
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownField(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) != 0)) {
+                    events_ = java.util.Collections.unmodifiableList(events_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-      }
-      /**
-       * <code>string window_end = 4;</code>
-       * @return The bytes for windowEnd.
-       */
-      public com.google.protobuf.ByteString
-          getWindowEndBytes() {
-        java.lang.Object ref = windowEnd_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          windowEnd_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string window_end = 4;</code>
-       * @param value The windowEnd to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowEnd(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        windowEnd_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_end = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWindowEnd() {
-        
-        windowEnd_ = getDefaultInstance().getWindowEnd();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string window_end = 4;</code>
-       * @param value The bytes for windowEnd to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowEndBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        windowEnd_ = value;
-        onChanged();
-        return this;
-      }
 
-      private float totalPrice_ ;
-      /**
-       * <code>float total_price = 5;</code>
-       * @return The totalPrice.
-       */
-      public float getTotalPrice() {
-        return totalPrice_;
-      }
-      /**
-       * <code>float total_price = 5;</code>
-       * @param value The totalPrice to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTotalPrice(float value) {
-        
-        totalPrice_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float total_price = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTotalPrice() {
-        
-        totalPrice_ = 0F;
-        onChanged();
-        return this;
-      }
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
+        }
 
-      private boolean windowOpen_ ;
-      /**
-       * <code>bool window_open = 6;</code>
-       * @return The windowOpen.
-       */
-      public boolean getWindowOpen() {
-        return windowOpen_;
-      }
-      /**
-       * <code>bool window_open = 6;</code>
-       * @param value The windowOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWindowOpen(boolean value) {
-        
-        windowOpen_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool window_open = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWindowOpen() {
-        
-        windowOpen_ = false;
-        onChanged();
-        return this;
-      }
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
 
-      private java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> events_ =
-        java.util.Collections.emptyList();
-      private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          events_ = new java.util.ArrayList<com.papaizaa.streaming_example.generated_pb.Events.Event>(events_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> eventsBuilder_;
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
 
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> getEventsList() {
-        if (eventsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(events_);
-        } else {
-          return eventsBuilder_.getMessageList();
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
         }
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public int getEventsCount() {
-        if (eventsBuilder_ == null) {
-          return events_.size();
-        } else {
-          return eventsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);
-        } else {
-          return eventsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder setEvents(
-          int index, com.papaizaa.streaming_example.generated_pb.Events.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder setEvents(
-          int index, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder addEvents(com.papaizaa.streaming_example.generated_pb.Events.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder addEvents(
-          int index, com.papaizaa.streaming_example.generated_pb.Events.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder addEvents(
-          com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder addEvents(
-          int index, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder addAllEvents(
-          java.lang.Iterable<? extends com.papaizaa.streaming_example.generated_pb.Events.Event> values) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          onChanged();
-        } else {
-          eventsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder clearEvents() {
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          eventsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public Builder removeEvents(int index) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.remove(index);
-          onChanged();
-        } else {
-          eventsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder getEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
-          int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);  } else {
-          return eventsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> 
-           getEventsOrBuilderList() {
-        if (eventsBuilder_ != null) {
-          return eventsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(events_);
-        }
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder addEventsBuilder() {
-        return getEventsFieldBuilder().addBuilder(
-            com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder addEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().addBuilder(
-            index, com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .example.Event events = 7;</code>
-       */
-      public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event.Builder> 
-           getEventsBuilderList() {
-        return getEventsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> 
-          getEventsFieldBuilder() {
-        if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>(
-                  events_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          events_ = null;
-        }
-        return eventsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(com.papaizaa.streaming_example.generated_pb.Events.Output prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<Output> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+                UnusedPrivateParameter unused) {
+            return new Output();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.papaizaa.streaming_example.generated_pb.Events.Output.class, com.papaizaa.streaming_example.generated_pb.Events.Output.Builder.class);
+        }
+
+        /**
+         * <code>string window_id = 1;</code>
+         *
+         * @return The windowId.
+         */
+        public java.lang.String getWindowId() {
+            java.lang.Object ref = windowId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                windowId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string window_id = 1;</code>
+         *
+         * @return The bytes for windowId.
+         */
+        public com.google.protobuf.ByteString
+        getWindowIdBytes() {
+            java.lang.Object ref = windowId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                windowId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>string user_id = 2;</code>
+         *
+         * @return The userId.
+         */
+        public java.lang.String getUserId() {
+            java.lang.Object ref = userId_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                userId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string user_id = 2;</code>
+         *
+         * @return The bytes for userId.
+         */
+        public com.google.protobuf.ByteString
+        getUserIdBytes() {
+            java.lang.Object ref = userId_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                userId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>string window_start = 3;</code>
+         *
+         * @return The windowStart.
+         */
+        public java.lang.String getWindowStart() {
+            java.lang.Object ref = windowStart_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                windowStart_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string window_start = 3;</code>
+         *
+         * @return The bytes for windowStart.
+         */
+        public com.google.protobuf.ByteString
+        getWindowStartBytes() {
+            java.lang.Object ref = windowStart_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                windowStart_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>string window_end = 4;</code>
+         *
+         * @return The windowEnd.
+         */
+        public java.lang.String getWindowEnd() {
+            java.lang.Object ref = windowEnd_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                windowEnd_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string window_end = 4;</code>
+         *
+         * @return The bytes for windowEnd.
+         */
+        public com.google.protobuf.ByteString
+        getWindowEndBytes() {
+            java.lang.Object ref = windowEnd_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                windowEnd_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>float total_price = 5;</code>
+         *
+         * @return The totalPrice.
+         */
+        public float getTotalPrice() {
+            return totalPrice_;
+        }
+
+        /**
+         * <code>bool window_open = 6;</code>
+         *
+         * @return The windowOpen.
+         */
+        public boolean getWindowOpen() {
+            return windowOpen_;
+        }
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> getEventsList() {
+            return events_;
+        }
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        public java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>
+        getEventsOrBuilderList() {
+            return events_;
+        }
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        public int getEventsCount() {
+            return events_.size();
+        }
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        public com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index) {
+            return events_.get(index);
+        }
+
+        /**
+         * <code>repeated .example.Event events = 7;</code>
+         */
+        public com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
+                int index) {
+            return events_.get(index);
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getWindowIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, windowId_);
+            }
+            if (!getUserIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
+            }
+            if (!getWindowStartBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, windowStart_);
+            }
+            if (!getWindowEndBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, windowEnd_);
+            }
+            if (totalPrice_ != 0F) {
+                output.writeFloat(5, totalPrice_);
+            }
+            if (windowOpen_ != false) {
+                output.writeBool(6, windowOpen_);
+            }
+            for (int i = 0; i < events_.size(); i++) {
+                output.writeMessage(7, events_.get(i));
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getWindowIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, windowId_);
+            }
+            if (!getUserIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
+            }
+            if (!getWindowStartBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, windowStart_);
+            }
+            if (!getWindowEndBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, windowEnd_);
+            }
+            if (totalPrice_ != 0F) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(5, totalPrice_);
+            }
+            if (windowOpen_ != false) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBoolSize(6, windowOpen_);
+            }
+            for (int i = 0; i < events_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(7, events_.get(i));
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof com.papaizaa.streaming_example.generated_pb.Events.Output)) {
+                return super.equals(obj);
+            }
+            com.papaizaa.streaming_example.generated_pb.Events.Output other = (com.papaizaa.streaming_example.generated_pb.Events.Output) obj;
+
+            if (!getWindowId()
+                    .equals(other.getWindowId())) return false;
+            if (!getUserId()
+                    .equals(other.getUserId())) return false;
+            if (!getWindowStart()
+                    .equals(other.getWindowStart())) return false;
+            if (!getWindowEnd()
+                    .equals(other.getWindowEnd())) return false;
+            if (java.lang.Float.floatToIntBits(getTotalPrice())
+                    != java.lang.Float.floatToIntBits(
+                    other.getTotalPrice())) return false;
+            if (getWindowOpen()
+                    != other.getWindowOpen()) return false;
+            if (!getEventsList()
+                    .equals(other.getEventsList())) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + WINDOW_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getWindowId().hashCode();
+            hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getUserId().hashCode();
+            hash = (37 * hash) + WINDOW_START_FIELD_NUMBER;
+            hash = (53 * hash) + getWindowStart().hashCode();
+            hash = (37 * hash) + WINDOW_END_FIELD_NUMBER;
+            hash = (53 * hash) + getWindowEnd().hashCode();
+            hash = (37 * hash) + TOTAL_PRICE_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                    getTotalPrice());
+            hash = (37 * hash) + WINDOW_OPEN_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                    getWindowOpen());
+            if (getEventsCount() > 0) {
+                hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+                hash = (53 * hash) + getEventsList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Output> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf type {@code example.Output}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:example.Output)
+                com.papaizaa.streaming_example.generated_pb.Events.OutputOrBuilder {
+            private int bitField0_;
+            private java.lang.Object windowId_ = "";
+            private java.lang.Object userId_ = "";
+            private java.lang.Object windowStart_ = "";
+            private java.lang.Object windowEnd_ = "";
+            private float totalPrice_;
+            private boolean windowOpen_;
+            private java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> events_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilderV3<
+                    com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder> eventsBuilder_;
+
+            // Construct using com.papaizaa.streaming_example.generated_pb.Events.Output.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.papaizaa.streaming_example.generated_pb.Events.Output.class, com.papaizaa.streaming_example.generated_pb.Events.Output.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                    getEventsFieldBuilder();
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                windowId_ = "";
+
+                userId_ = "";
+
+                windowStart_ = "";
+
+                windowEnd_ = "";
+
+                totalPrice_ = 0F;
+
+                windowOpen_ = false;
+
+                if (eventsBuilder_ == null) {
+                    events_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                    eventsBuilder_.clear();
+                }
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.papaizaa.streaming_example.generated_pb.Events.internal_static_example_Output_descriptor;
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstanceForType() {
+                return com.papaizaa.streaming_example.generated_pb.Events.Output.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Output build() {
+                com.papaizaa.streaming_example.generated_pb.Events.Output result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public com.papaizaa.streaming_example.generated_pb.Events.Output buildPartial() {
+                com.papaizaa.streaming_example.generated_pb.Events.Output result = new com.papaizaa.streaming_example.generated_pb.Events.Output(this);
+                int from_bitField0_ = bitField0_;
+                result.windowId_ = windowId_;
+                result.userId_ = userId_;
+                result.windowStart_ = windowStart_;
+                result.windowEnd_ = windowEnd_;
+                result.totalPrice_ = totalPrice_;
+                result.windowOpen_ = windowOpen_;
+                if (eventsBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) != 0)) {
+                        events_ = java.util.Collections.unmodifiableList(events_);
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    }
+                    result.events_ = events_;
+                } else {
+                    result.events_ = eventsBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.papaizaa.streaming_example.generated_pb.Events.Output) {
+                    return mergeFrom((com.papaizaa.streaming_example.generated_pb.Events.Output) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.papaizaa.streaming_example.generated_pb.Events.Output other) {
+                if (other == com.papaizaa.streaming_example.generated_pb.Events.Output.getDefaultInstance())
+                    return this;
+                if (!other.getWindowId().isEmpty()) {
+                    windowId_ = other.windowId_;
+                    onChanged();
+                }
+                if (!other.getUserId().isEmpty()) {
+                    userId_ = other.userId_;
+                    onChanged();
+                }
+                if (!other.getWindowStart().isEmpty()) {
+                    windowStart_ = other.windowStart_;
+                    onChanged();
+                }
+                if (!other.getWindowEnd().isEmpty()) {
+                    windowEnd_ = other.windowEnd_;
+                    onChanged();
+                }
+                if (other.getTotalPrice() != 0F) {
+                    setTotalPrice(other.getTotalPrice());
+                }
+                if (other.getWindowOpen() != false) {
+                    setWindowOpen(other.getWindowOpen());
+                }
+                if (eventsBuilder_ == null) {
+                    if (!other.events_.isEmpty()) {
+                        if (events_.isEmpty()) {
+                            events_ = other.events_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                        } else {
+                            ensureEventsIsMutable();
+                            events_.addAll(other.events_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.events_.isEmpty()) {
+                        if (eventsBuilder_.isEmpty()) {
+                            eventsBuilder_.dispose();
+                            eventsBuilder_ = null;
+                            events_ = other.events_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                            eventsBuilder_ =
+                                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                                            getEventsFieldBuilder() : null;
+                        } else {
+                            eventsBuilder_.addAllMessages(other.events_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.papaizaa.streaming_example.generated_pb.Events.Output parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.papaizaa.streaming_example.generated_pb.Events.Output) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>string window_id = 1;</code>
+             *
+             * @return The windowId.
+             */
+            public java.lang.String getWindowId() {
+                java.lang.Object ref = windowId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    windowId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string window_id = 1;</code>
+             *
+             * @param value The windowId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                windowId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_id = 1;</code>
+             *
+             * @return The bytes for windowId.
+             */
+            public com.google.protobuf.ByteString
+            getWindowIdBytes() {
+                java.lang.Object ref = windowId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    windowId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string window_id = 1;</code>
+             *
+             * @param value The bytes for windowId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                windowId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_id = 1;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearWindowId() {
+
+                windowId_ = getDefaultInstance().getWindowId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 2;</code>
+             *
+             * @return The userId.
+             */
+            public java.lang.String getUserId() {
+                java.lang.Object ref = userId_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    userId_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string user_id = 2;</code>
+             *
+             * @param value The userId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUserId(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                userId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 2;</code>
+             *
+             * @return The bytes for userId.
+             */
+            public com.google.protobuf.ByteString
+            getUserIdBytes() {
+                java.lang.Object ref = userId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    userId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string user_id = 2;</code>
+             *
+             * @param value The bytes for userId to set.
+             * @return This builder for chaining.
+             */
+            public Builder setUserIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                userId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string user_id = 2;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearUserId() {
+
+                userId_ = getDefaultInstance().getUserId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_start = 3;</code>
+             *
+             * @return The windowStart.
+             */
+            public java.lang.String getWindowStart() {
+                java.lang.Object ref = windowStart_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    windowStart_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string window_start = 3;</code>
+             *
+             * @param value The windowStart to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowStart(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                windowStart_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_start = 3;</code>
+             *
+             * @return The bytes for windowStart.
+             */
+            public com.google.protobuf.ByteString
+            getWindowStartBytes() {
+                java.lang.Object ref = windowStart_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    windowStart_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string window_start = 3;</code>
+             *
+             * @param value The bytes for windowStart to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowStartBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                windowStart_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_start = 3;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearWindowStart() {
+
+                windowStart_ = getDefaultInstance().getWindowStart();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_end = 4;</code>
+             *
+             * @return The windowEnd.
+             */
+            public java.lang.String getWindowEnd() {
+                java.lang.Object ref = windowEnd_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    windowEnd_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string window_end = 4;</code>
+             *
+             * @param value The windowEnd to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowEnd(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                windowEnd_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_end = 4;</code>
+             *
+             * @return The bytes for windowEnd.
+             */
+            public com.google.protobuf.ByteString
+            getWindowEndBytes() {
+                java.lang.Object ref = windowEnd_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    windowEnd_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string window_end = 4;</code>
+             *
+             * @param value The bytes for windowEnd to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowEndBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                windowEnd_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string window_end = 4;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearWindowEnd() {
+
+                windowEnd_ = getDefaultInstance().getWindowEnd();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>float total_price = 5;</code>
+             *
+             * @return The totalPrice.
+             */
+            public float getTotalPrice() {
+                return totalPrice_;
+            }
+
+            /**
+             * <code>float total_price = 5;</code>
+             *
+             * @param value The totalPrice to set.
+             * @return This builder for chaining.
+             */
+            public Builder setTotalPrice(float value) {
+
+                totalPrice_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>float total_price = 5;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearTotalPrice() {
+
+                totalPrice_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bool window_open = 6;</code>
+             *
+             * @return The windowOpen.
+             */
+            public boolean getWindowOpen() {
+                return windowOpen_;
+            }
+
+            /**
+             * <code>bool window_open = 6;</code>
+             *
+             * @param value The windowOpen to set.
+             * @return This builder for chaining.
+             */
+            public Builder setWindowOpen(boolean value) {
+
+                windowOpen_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bool window_open = 6;</code>
+             *
+             * @return This builder for chaining.
+             */
+            public Builder clearWindowOpen() {
+
+                windowOpen_ = false;
+                onChanged();
+                return this;
+            }
+
+            private void ensureEventsIsMutable() {
+                if (!((bitField0_ & 0x00000001) != 0)) {
+                    events_ = new java.util.ArrayList<com.papaizaa.streaming_example.generated_pb.Events.Event>(events_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event> getEventsList() {
+                if (eventsBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(events_);
+                } else {
+                    return eventsBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public int getEventsCount() {
+                if (eventsBuilder_ == null) {
+                    return events_.size();
+                } else {
+                    return eventsBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.Event getEvents(int index) {
+                if (eventsBuilder_ == null) {
+                    return events_.get(index);
+                } else {
+                    return eventsBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder setEvents(
+                    int index, com.papaizaa.streaming_example.generated_pb.Events.Event value) {
+                if (eventsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureEventsIsMutable();
+                    events_.set(index, value);
+                    onChanged();
+                } else {
+                    eventsBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder setEvents(
+                    int index, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
+                if (eventsBuilder_ == null) {
+                    ensureEventsIsMutable();
+                    events_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    eventsBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder addEvents(com.papaizaa.streaming_example.generated_pb.Events.Event value) {
+                if (eventsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureEventsIsMutable();
+                    events_.add(value);
+                    onChanged();
+                } else {
+                    eventsBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder addEvents(
+                    int index, com.papaizaa.streaming_example.generated_pb.Events.Event value) {
+                if (eventsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureEventsIsMutable();
+                    events_.add(index, value);
+                    onChanged();
+                } else {
+                    eventsBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder addEvents(
+                    com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
+                if (eventsBuilder_ == null) {
+                    ensureEventsIsMutable();
+                    events_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    eventsBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder addEvents(
+                    int index, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder builderForValue) {
+                if (eventsBuilder_ == null) {
+                    ensureEventsIsMutable();
+                    events_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    eventsBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder addAllEvents(
+                    java.lang.Iterable<? extends com.papaizaa.streaming_example.generated_pb.Events.Event> values) {
+                if (eventsBuilder_ == null) {
+                    ensureEventsIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, events_);
+                    onChanged();
+                } else {
+                    eventsBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder clearEvents() {
+                if (eventsBuilder_ == null) {
+                    events_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                    onChanged();
+                } else {
+                    eventsBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public Builder removeEvents(int index) {
+                if (eventsBuilder_ == null) {
+                    ensureEventsIsMutable();
+                    events_.remove(index);
+                    onChanged();
+                } else {
+                    eventsBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder getEventsBuilder(
+                    int index) {
+                return getEventsFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder getEventsOrBuilder(
+                    int index) {
+                if (eventsBuilder_ == null) {
+                    return events_.get(index);
+                } else {
+                    return eventsBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public java.util.List<? extends com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>
+            getEventsOrBuilderList() {
+                if (eventsBuilder_ != null) {
+                    return eventsBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(events_);
+                }
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder addEventsBuilder() {
+                return getEventsFieldBuilder().addBuilder(
+                        com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public com.papaizaa.streaming_example.generated_pb.Events.Event.Builder addEventsBuilder(
+                    int index) {
+                return getEventsFieldBuilder().addBuilder(
+                        index, com.papaizaa.streaming_example.generated_pb.Events.Event.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .example.Event events = 7;</code>
+             */
+            public java.util.List<com.papaizaa.streaming_example.generated_pb.Events.Event.Builder>
+            getEventsBuilderList() {
+                return getEventsFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilderV3<
+                    com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>
+            getEventsFieldBuilder() {
+                if (eventsBuilder_ == null) {
+                    eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                            com.papaizaa.streaming_example.generated_pb.Events.Event, com.papaizaa.streaming_example.generated_pb.Events.Event.Builder, com.papaizaa.streaming_example.generated_pb.Events.EventOrBuilder>(
+                            events_,
+                            ((bitField0_ & 0x00000001) != 0),
+                            getParentForChildren(),
+                            isClean());
+                    events_ = null;
+                }
+                return eventsBuilder_;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
 
 
-      // @@protoc_insertion_point(builder_scope:example.Output)
+            // @@protoc_insertion_point(builder_scope:example.Output)
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:example.Output)
-    private static final com.papaizaa.streaming_example.generated_pb.Events.Output DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.papaizaa.streaming_example.generated_pb.Events.Output();
-    }
-
-    public static com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Output>
-        PARSER = new com.google.protobuf.AbstractParser<Output>() {
-      @java.lang.Override
-      public Output parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Output(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Output> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Output> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.papaizaa.streaming_example.generated_pb.Events.Output getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_Event_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_example_Event_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_Output_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_example_Output_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\014events.proto\022\007example\"\251\001\n\005Event\022\020\n\010eve" +
-      "nt_id\030\001 \001(\t\022\022\n\nevent_time\030\002 \001(\t\022\017\n\007user_" +
-      "id\030\003 \001(\t\022\r\n\005price\030\004 \001(\002\022,\n\nevent_type\030\005 " +
-      "\001(\0162\030.example.Event.EventType\",\n\tEventTy" +
-      "pe\022\r\n\tBOOK_SALE\020\000\022\020\n\014GROCERY_SALE\020\001\"\240\001\n\006" +
-      "Output\022\021\n\twindow_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001" +
-      "(\t\022\024\n\014window_start\030\003 \001(\t\022\022\n\nwindow_end\030\004" +
-      " \001(\t\022\023\n\013total_price\030\005 \001(\002\022\023\n\013window_open" +
-      "\030\006 \001(\010\022\036\n\006events\030\007 \003(\0132\016.example.EventB-" +
-      "\n+com.papaizaa.streaming_example.generat" +
-      "ed_pbb\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_example_Event_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_example_Event_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_example_Event_descriptor,
-        new java.lang.String[] { "EventId", "EventTime", "UserId", "Price", "EventType", });
-    internal_static_example_Output_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_example_Output_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_example_Output_descriptor,
-        new java.lang.String[] { "WindowId", "UserId", "WindowStart", "WindowEnd", "TotalPrice", "WindowOpen", "Events", });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

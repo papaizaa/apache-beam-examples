@@ -3,6 +3,7 @@ package com.papaizaa.streaming_example;
 import avro.shaded.com.google.common.collect.Lists;
 import com.papaizaa.streaming_example.generated_pb.Events;
 import org.apache.beam.sdk.transforms.DoFn;
+import org.apache.beam.sdk.transforms.windowing.BoundedWindow;
 import org.apache.beam.sdk.transforms.windowing.PaneInfo;
 import org.apache.beam.sdk.values.KV;
 import org.joda.time.DateTime;
@@ -19,7 +20,7 @@ public class CombineEvents {
 
 
         @ProcessElement
-        public void processElement(ProcessContext c){
+        public void processElement(ProcessContext c, BoundedWindow window) {
             try {
                 KV<String, Iterable<Events.Event>> element = c.element();
                 String userID = element.getKey();
@@ -37,6 +38,9 @@ public class CombineEvents {
                 String newestEventTime = sortedEvents.get(events.size() - 1).getEventTime();
 
                 boolean windowOpen = c.pane().getTiming() != PaneInfo.Timing.ON_TIME;
+                if (!windowOpen) {
+                    newestEventTime = window.maxTimestamp().toString();
+                }
 
                 Events.Output out = Events.Output
                         .newBuilder()
@@ -50,15 +54,15 @@ public class CombineEvents {
                         .build();
 
                 c.output(out);
-            } catch (Exception e){
+            } catch (Exception e) {
                 LOG.error("Error reading PROTO input: {} with error message: ", c.element(), e);
             }
         }
 
-        public List<Events.Event> sortEvents(List<Events.Event> events){
+        public List<Events.Event> sortEvents(List<Events.Event> events) {
             Comparator<Events.Event> compareByEventTime = new Comparator<Events.Event>() {
                 @Override
-                public int compare(Events.Event e1, Events.Event e2)  {
+                public int compare(Events.Event e1, Events.Event e2) {
                     DateTime dateE1 = DateTime.parse(e1.getEventTime());
                     DateTime dateE2 = DateTime.parse(e2.getEventTime());
                     return dateE1.compareTo(dateE2);

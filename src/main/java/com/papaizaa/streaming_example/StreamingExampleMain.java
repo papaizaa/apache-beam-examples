@@ -1,8 +1,5 @@
 package com.papaizaa.streaming_example;
 
-import com.google.api.services.bigquery.model.TableFieldSchema;
-import com.google.api.services.bigquery.model.TableRow;
-import com.google.api.services.bigquery.model.TableSchema;
 import com.papaizaa.streaming_example.generated_pb.Events;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.extensions.protobuf.ProtoCoder;
@@ -15,11 +12,8 @@ import org.apache.beam.sdk.transforms.windowing.*;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PCollectionList;
-import org.apache.beam.sdk.values.TupleTag;
 import org.joda.time.Duration;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.apache.beam.sdk.transforms.windowing.AfterProcessingTime.pastFirstElementInPane;
 
@@ -36,7 +30,6 @@ public class StreamingExampleMain {
         pipeline.getCoderRegistry().registerCoderForClass(Events.Event.class, ProtoCoder.of(Events.Event.class));
 
         Trigger trigger = Repeatedly.forever(pastFirstElementInPane()
-                .plusDelayOf(Duration.standardSeconds(15))
                 .orFinally(AfterWatermark.pastEndOfWindow()));
 
         Window<KV<String, Events.Event>> sessionWindow =
@@ -51,8 +44,6 @@ public class StreamingExampleMain {
 
         PCollection<Events.Event> groceries = pipeline.apply("Read events",
                 PubsubIO.readProtos(Events.Event.class).fromSubscription(options.getGrocerySubscriptionName()));
-
-        final TupleTag<TableRow> eventsTag = new TupleTag<TableRow>(){};
 
         // Flatten two PubSub streams into one collection
         PCollection<Events.Event> events = PCollectionList.of(books).and(groceries).apply(Flatten.pCollections());
@@ -87,18 +78,6 @@ public class StreamingExampleMain {
 
         void setOutputTopic(String value);
 
-
-    }
-
-    // BigQuery table schema for the DoorEvents Table.
-    public static TableSchema getSessionSalesSchema() {
-        List<TableFieldSchema> fields = new ArrayList<>();
-        fields.add(new TableFieldSchema().setName("UserID").setType("STRING"));
-        fields.add(new TableFieldSchema().setName("TotalSalesInWeek").setType("FLOAT"));
-        fields.add(new TableFieldSchema().setName("StartOfWeek").setType("TIMESTAMP"));
-        fields.add(new TableFieldSchema().setName("EndOfWeek").setType("TIMESTAMP"));
-
-        return new TableSchema().setFields(fields);
     }
 
 }

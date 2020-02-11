@@ -25,11 +25,10 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.slf4j.Logger;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.slf4j.LoggerFactory.*;
+import static org.slf4j.LoggerFactory.getLogger;
 
 public class BatchExampleMain {
 
@@ -98,6 +97,16 @@ public class BatchExampleMain {
                                 .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND));
     }
 
+    // BigQuery table schema for the DoorEvents Table.
+    public static TableSchema getWeeklySalesSchema() {
+        List<TableFieldSchema> fields = new ArrayList<>();
+        fields.add(new TableFieldSchema().setName("UserID").setType("STRING"));
+        fields.add(new TableFieldSchema().setName("TotalSalesInWeek").setType("FLOAT"));
+        fields.add(new TableFieldSchema().setName("StartOfWeek").setType("TIMESTAMP"));
+        fields.add(new TableFieldSchema().setName("EndOfWeek").setType("TIMESTAMP"));
+
+        return new TableSchema().setFields(fields);
+    }
 
     public interface BatchPipelineOptions extends PipelineOptions {
 
@@ -115,16 +124,5 @@ public class BatchExampleMain {
         ValueProvider<String> getWeeklyAggregatedSalesInputTable();
 
         void setWeeklyAggregatedSalesInputTable(ValueProvider<String> value);
-    }
-
-    // BigQuery table schema for the DoorEvents Table.
-    public static TableSchema getWeeklySalesSchema() {
-        List<TableFieldSchema> fields = new ArrayList<>();
-        fields.add(new TableFieldSchema().setName("UserID").setType("STRING"));
-        fields.add(new TableFieldSchema().setName("TotalSalesInWeek").setType("FLOAT"));
-        fields.add(new TableFieldSchema().setName("StartOfWeek").setType("TIMESTAMP"));
-        fields.add(new TableFieldSchema().setName("EndOfWeek").setType("TIMESTAMP"));
-
-        return new TableSchema().setFields(fields);
     }
 }
