@@ -29,9 +29,11 @@ public class StreamingExampleMain {
         Pipeline pipeline = Pipeline.create(options);
         pipeline.getCoderRegistry().registerCoderForClass(Events.Event.class, ProtoCoder.of(Events.Event.class));
 
+        // Trigger on first element in window, for every new element and when the window closes
         Trigger trigger = Repeatedly.forever(pastFirstElementInPane()
                 .orFinally(AfterWatermark.pastEndOfWindow()));
 
+        // If no activity for `SESSION_WINDOW_GAP_DURATION` minutes, trigger a window closed event
         Window<KV<String, Events.Event>> sessionWindow =
                 Window.<KV<String, Events.Event>>into(Sessions.withGapDuration(
                         Duration.standardMinutes(SESSION_WINDOW_GAP_DURATION)))

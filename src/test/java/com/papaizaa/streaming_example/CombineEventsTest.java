@@ -61,18 +61,20 @@ public class CombineEventsTest {
         events.add(createDummyEvent(0.6f, Duration.standardMinutes(1), "a1"));
         events.add(createDummyEvent(11.4f, Duration.standardMinutes(4), "b3"));
 
-        PCollection<KV<String, Events.Event>> combinedEvents = testPipeline.apply("Create Events", TestStream.create(KvCoder.of(StringUtf8Coder.of(), ProtoCoder.of(Events.Event.class)))
-                .advanceWatermarkTo(baseTime)
-                .addElements(createTSEvent(events.get(2)))
-                .advanceProcessingTime(Duration.standardMinutes(2))
-                .addElements(createTSEvent(events.get(0)))
-                .advanceProcessingTime(Duration.standardMinutes(3))
-                .addElements(createTSEvent(events.get(1)))
-                .advanceProcessingTime(Duration.standardMinutes(4))
-                .addElements(createTSEvent(events.get(3)))
-                .advanceProcessingTime(Duration.standardMinutes(5))
-                .advanceProcessingTime(Duration.standardMinutes(15)) // Advance processing time to after watermark
-                .advanceWatermarkToInfinity());
+        PCollection<KV<String, Events.Event>> combinedEvents = testPipeline
+                .apply("Create Events",
+                        TestStream.create(KvCoder.of(StringUtf8Coder.of(), ProtoCoder.of(Events.Event.class)))
+                                .advanceWatermarkTo(baseTime)
+                                .addElements(createTSEvent(events.get(2)))
+                                .advanceProcessingTime(Duration.standardMinutes(2))
+                                .addElements(createTSEvent(events.get(0)))
+                                .advanceProcessingTime(Duration.standardMinutes(3))
+                                .addElements(createTSEvent(events.get(1)))
+                                .advanceProcessingTime(Duration.standardMinutes(4))
+                                .addElements(createTSEvent(events.get(3)))
+                                .advanceProcessingTime(Duration.standardMinutes(5))
+                                .advanceProcessingTime(Duration.standardMinutes(15)) // Advance processing time to after watermark
+                                .advanceWatermarkToInfinity());
 
         PCollection<Events.Output> output = applyCombineTransform(sessionWindow, combinedEvents);
 
