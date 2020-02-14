@@ -56,20 +56,20 @@ public class CombineEventsTest {
     @Test
     public void testPipelineWithTrueEventsAndAllWithinWindow() throws IOException {
 
+        events.add(createDummyEvent(0.6f, Duration.standardMinutes(1), "a1"));
         events.add(createDummyEvent(4.0f, Duration.standardMinutes(2), "b1"));
         events.add(createDummyEvent(30.2f, Duration.standardMinutes(3), "b2"));
-        events.add(createDummyEvent(0.6f, Duration.standardMinutes(1), "a1"));
         events.add(createDummyEvent(11.4f, Duration.standardMinutes(4), "b3"));
 
         PCollection<KV<String, Events.Event>> combinedEvents = testPipeline
                 .apply("Create Events",
                         TestStream.create(KvCoder.of(StringUtf8Coder.of(), ProtoCoder.of(Events.Event.class)))
                                 .advanceWatermarkTo(baseTime)
-                                .addElements(createTSEvent(events.get(2)))
-                                .advanceProcessingTime(Duration.standardMinutes(2))
                                 .addElements(createTSEvent(events.get(0)))
-                                .advanceProcessingTime(Duration.standardMinutes(3))
+                                .advanceProcessingTime(Duration.standardMinutes(2))
                                 .addElements(createTSEvent(events.get(1)))
+                                .advanceProcessingTime(Duration.standardMinutes(3))
+                                .addElements(createTSEvent(events.get(2)))
                                 .advanceProcessingTime(Duration.standardMinutes(4))
                                 .addElements(createTSEvent(events.get(3)))
                                 .advanceProcessingTime(Duration.standardMinutes(5))
@@ -79,7 +79,7 @@ public class CombineEventsTest {
         PCollection<Events.Output> output = applyCombineTransform(sessionWindow, combinedEvents);
 
         ArrayList<Events.Event> expectedEvents = new ArrayList<Events.Event>() {{
-            add(events.get(2).getValue());
+            add(events.get(0).getValue());
         }};
 
         Events.Output resultFirst = Events.Output.newBuilder()
@@ -92,7 +92,7 @@ public class CombineEventsTest {
                 .addAllEvents(expectedEvents)
                 .build();
 
-        expectedEvents.add(events.get(0).getValue());
+        expectedEvents.add(events.get(1).getValue());
 
         Events.Output resultSecond = Events.Output.newBuilder()
                 .setWindowId("a1")
@@ -104,7 +104,7 @@ public class CombineEventsTest {
                 .addAllEvents(expectedEvents)
                 .build();
 
-        expectedEvents.add(events.get(1).getValue());
+        expectedEvents.add(events.get(2).getValue());
 
         Events.Output resultThird = Events.Output.newBuilder()
                 .setWindowId("a1")
