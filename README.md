@@ -9,3 +9,4 @@ Batch Article:
 https://medium.com/@asitkovets/testing-in-apache-beam-part-1-batch-a1be83f62730
 
 Streaming Article:
+https://medium.com/@asitkovets/testing-in-apache-beam-part-2-stream-2a9950ba2bc7
